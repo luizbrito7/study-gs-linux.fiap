@@ -28,7 +28,7 @@ check_exit_code() {
 
 IP_FIXO="192.168.0.201"
 NETMASK="255.255.255.0"
-NIC="eth0"
+NIC="enp0s8"
 
 log_warn "Configuração IP fixo NIC Host-Only: $NIC"
 
