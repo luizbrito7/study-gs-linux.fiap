@@ -26,7 +26,7 @@ check_exit_code() {
 # network environment variables
 # ===============
 
-IP_FIXO="192.168.0.201"
+IP_FIXO="192.168.56.201"
 NETMASK="255.255.255.0"
 NIC="enp0s8"
 
@@ -58,6 +58,10 @@ rm -rf "$APACHE_PATH"/*
 log_info "Baixando website..."
 wget -q "$WEB_SITE_URL" -O /tmp/site.zip && unzip /tmp/site.zip -d $APACHE_PATH
 check_exit_code $? "Download website"
+
+log_info "Setup Apache"
+
+
 
 log_success "Webserver configurado com sucesso!"
 
